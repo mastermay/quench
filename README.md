@@ -1,5 +1,10 @@
 WordPress Theme Quench
 ======
+update 2016-02-20
+
++ 压缩 CSS/JS 代码
++ 一处 JSON API 支持
+
 update 2016-01-20
 
 + 更新 Gravatar 源，使用七牛云存储
