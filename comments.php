@@ -1,3 +1,6 @@
+<?php
+if(comments_open()) {
+ ?>
 <div class="comments clearfix box">
 	<?php $comments = get_comments('post_id='.$post->ID.'&status=approve');?>
 	<h5 id="comments-title"><span><?php echo count($comments); ?> Comments</span></h5>
@@ -16,23 +19,24 @@
 			<?php } else { ?>
 			<p class="input-row"><input type="text" name="author" class="text_input" id="author" size="22" tabindex="1" placeholder="<?php _e('NAME', 'quench');?> *"/>
 			</p>
-			
+
 			<p class="input-row"><input type="text" name="email" class="text_input" id="email" size="22" tabindex="2" placeholder="<?php _e('E-MAIL', 'quench');?> *"/>
 			</p>
-			
+
 			<p class="input-row"><input type="text" name="url" class="text_input" id="url" size="22" tabindex="3"  placeholder="<?php _e('WEBSITE', 'quench');?>"/>
 			</p>
-			
+
 			<?php }?>
-			
+
 			<?php comment_id_fields(); do_action('comment_form', $post->ID); ?>
-		
-	
-		
+
 			<p class="input-row message-row"><textarea class="text_area" rows="3" cols="80" name="comment" id="comment" tabindex="4"  placeholder="<?php _e('CONTENT...', 'quench');?>"></textarea></p>
 			<input type="submit" name="submit" class="button" id="submit" tabindex="5" value="Submit"/>
-		
+
 		</form>
 	</div>
 
 </div>
+<?php
+}
+ ?>

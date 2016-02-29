@@ -2,8 +2,12 @@ WordPress Theme Quench
 ======
 update 2016-02-20
 
++ 修复关闭评论仍显示评论框的错误
+
+update 2016-02-20
+
 + 压缩 CSS/JS 代码
-+ 一处 JSON API 支持
++ 移除 JSON API 支持
 
 update 2016-01-20
 
