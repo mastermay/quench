@@ -1,7 +1,6 @@
 WordPress Theme Quench
 ======
 update 2016-02-20
-
 + 修复关闭评论仍显示评论框的错误
 
 update 2016-02-20
