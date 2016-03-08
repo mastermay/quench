@@ -1,8 +1,14 @@
 <?php
+/**
+ * Theme functions and definitions
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function pagenavi($range = 7) {
 	global $paged, $wp_query;
-	if ( !$max_page ) {$max_page = $wp_query->max_num_pages;}
+	$max_page = $wp_query->max_num_pages;
 	if($max_page > 1){if(!$paged){$paged = 1;}
 	if($paged>1) echo '<a href="' . get_pagenum_link($paged-1) .'"><</a>';
     if($max_page > $range){
@@ -19,7 +25,7 @@ function pagenavi($range = 7) {
    }
 }
 
-function mzw_description() {
+function lo_description() {
     global $s, $post;
     $description = '';
     $blog_name = get_bloginfo('name');
@@ -41,11 +47,11 @@ function mzw_description() {
     $description = mb_substr( $description, 0, 220, 'utf-8' );
     echo "<meta name=\"description\" content=\"$description\">\n";
 }
-add_action('wp_head','mzw_description');
+add_action('wp_head','lo_description');
 
 
 
-if ( ! function_exists( 'mzw_post_views' ) ) {
+if ( ! function_exists( 'lo_post_views' ) ) {
     function record_visitors() {
     	if (is_singular()) {
             global $post;
@@ -60,7 +66,7 @@ if ( ! function_exists( 'mzw_post_views' ) ) {
     }
     add_action('wp_head', 'record_visitors');
 
-    function mzw_post_views($after='') {
+    function lo_post_views($after='') {
         global $post;
         $post_ID = $post->ID;
         $views = (int)get_post_meta($post_ID, 'views', true);
@@ -68,24 +74,24 @@ if ( ! function_exists( 'mzw_post_views' ) ) {
     }
 }
 
-add_action('wp_ajax_nopriv_mzw_like', 'mzw_like');
-add_action('wp_ajax_mzw_like', 'mzw_like');
-function mzw_like(){
+add_action('wp_ajax_nopriv_lo_like', 'lo_like');
+add_action('wp_ajax_lo_like', 'lo_like');
+function lo_like(){
     global $wpdb,$post;
     $id = $_POST["um_id"];
     $action = $_POST["um_action"];
     if ( $action == 'ding'){
-    $mzw_raters = get_post_meta($id,'mzw_ding',true);
+    $lo_raters = get_post_meta($id,'lo_ding',true);
     $expire = time() + 99999999;
     $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false; // make cookies work with localhost
-    setcookie('mzw_ding_'.$id,$id,$expire,'/',$domain,false);
-    if (!$mzw_raters || !is_numeric($mzw_raters)) {
-        update_post_meta($id, 'mzw_ding', 1);
+    setcookie('lo_ding_'.$id,$id,$expire,'/',$domain,false);
+    if (!$lo_raters || !is_numeric($lo_raters)) {
+        update_post_meta($id, 'lo_ding', 1);
     }
     else {
-            update_post_meta($id, 'mzw_ding', ($mzw_raters + 1));
+            update_post_meta($id, 'lo_ding', ($lo_raters + 1));
         }
-    echo get_post_meta($id,'mzw_ding',true);
+    echo get_post_meta($id,'lo_ding',true);
     }
     die;
 }

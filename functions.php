@@ -1,4 +1,11 @@
 <?php
+/**
+ * Include all functions
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
+
 include_once('functions/themes.php');
 include_once('functions/articles.php');
 include_once('functions/clear.php');

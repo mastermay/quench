@@ -1,4 +1,10 @@
 <?php
+/**
+ * Functions for thumbnails
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function post_thumbnail( $width = 180,$height = 180 ,$flag = true) {
     global $post;

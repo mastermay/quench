@@ -30,13 +30,9 @@ function ajaxloadPageInit(scope){
 	jQuery(scope + "a").click(function(event){
 		if (this.href.indexOf(ajax.home) >= 0 && this.href.indexOf(ajax.home) <20 && ajaxcheck_ignore(this.href) == true){
 			event.preventDefault();
-
 			this.blur();
-
 			var caption = this.title || this.name || "";
-
 			var group = this.rel || false;
-
 			try {
 				ajaxclick_code(this);
 			} catch(err) {

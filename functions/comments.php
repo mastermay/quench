@@ -1,9 +1,15 @@
 <?php
+/**
+ * Functions for comments
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment;
 ?>
-   <li <?php comment_class(); ?><?php if( $depth > 2){ echo ' style="margin-left:-50px;"';} ?> id="li-comment-<?php comment_ID() ?>">
+<li <?php comment_class(); ?><?php if( $depth > 2){ echo ' style="margin-left:-50px;"';} ?> id="li-comment-<?php comment_ID() ?>">
 <article id="comment-<?php comment_ID(); ?>" class="comment-body">
 	<div class="comment-meta clearfix">
 		<div class="comment-author vcard">

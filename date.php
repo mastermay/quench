@@ -1,26 +1,31 @@
+<?php
+/**
+ * The template for date archive pages
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
-<?php get_header(); ?>
+get_header(); ?>
 
 <div class="box archive-meta">
 	<h3 class="title-meta">
-		<?php 
+		<?php
 			if(is_day()) echo the_time('Y年m月j日');
 			elseif(is_month()) echo the_time('Y年m月');
-			elseif(is_year()) echo the_time('Y年'); 
+			elseif(is_year()) echo the_time('Y年');
 		?>的存档
 		</h3>
 	<?php echo '<div class="desc-meta"><span class="top">◆</span>文章存档</div>'; ?>
 </div>
 
-<?php 
-
-	if( have_posts() ){ 
+<?php
+	if( have_posts() ){
 		while ( have_posts() ){
-			the_post(); 
+			the_post();
 			get_template_part( 'inc/post-format/content', get_post_format() );
 		}
 	}
-
 ?>
 
 <?php if($wp_query->max_num_pages > 1 ) { ?>
@@ -28,9 +33,10 @@
        <?php pagenavi($range = 3);?>
     </div>
 <?php } ?>
+
 </div></div>
 
-<?php get_sidebar(); ?>
-
-
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
+?>

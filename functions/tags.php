@@ -1,4 +1,10 @@
 <?php
+/**
+ * Functions for tags
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function specs_getfirstchar($s0) {
     $fchar = ord($s0{0});

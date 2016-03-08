@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
+?>
 <article <?php post_class(); ?>>
     <header class="entry-header">
 		<h2 class="entry-name">
@@ -7,7 +15,7 @@
 			<li><i class="fa fa-clock-o"></i> <?php the_time('d,m,Y');?></li>
 			<li><?php echo'<i class="fa fa-pencil-square-o"></i> ';the_category(','); ?></li>
 			<li><i class="fa fa-comments-o"></i> <?php comments_popup_link('No Reply', '1 Reply', '% Replies'); ?></li>
-			<li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li>
+			<li><i class="fa fa-eye"></i> <?php lo_post_views(' Views');?></li>
 		</ul>
     </header>
     <div class="entry-content" itemprop="description">
@@ -17,17 +25,17 @@
 		<div class="post-share">
 			<a href="javascript:;"><i class="fa fa-share-alt"></i><?php _e('share', 'quench');?></a>
 			<ul>
-				<li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank"><i class="fa fa-qq"></i></a></li>
-				<li><a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-weibo"></i></a></li>
-				<li><a href="http://share.renren.com/share/buttonshare?link=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank"><i class="fa fa-renren"></i></a></li>
-				<li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" target="_blank"><i class="fa fa-qq"></i></a></li>
+				<li><a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-weibo"></i></a></li>
+				<li><a href="http://share.renren.com/share/buttonshare?link=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" target="_blank"><i class="fa fa-renren"></i></a></li>
+				<li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
 			</ul>
 		</div>
 		<div class="post-love">
-			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['mzw_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i> 
+			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['lo_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i>
 			<span class="love-count">
-				<?php if( get_post_meta($post->ID,'mzw_ding',true) ){            
-                    echo get_post_meta($post->ID,'mzw_ding',true);
+				<?php if( get_post_meta($post->ID,'lo_ding',true) ){
+                    echo get_post_meta($post->ID,'lo_ding',true);
                  } else {
                     echo '0';
                  }?>
@@ -44,13 +52,11 @@
 </article>
 
 <div class="post-author box clearfix">
-	<?php echo get_avatar( get_the_author_email(), $size = '80' , '' );?>
+	<?php echo get_avatar( get_the_author_meta('email'), $size = '80' , '' );?>
 	<div class="author-meta">
 		<p class="name"><?php the_author(); ?></p>
-		<p class="description"><?php the_author_description(); ?></p>
-		
+		<p class="description"><?php the_author_meta('description'); ?></p>
 	</div>
-	
 </div>
 
 <?php include_once('relatedpost.php')?>

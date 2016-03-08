@@ -1,4 +1,10 @@
 <?php
+/**
+ * Shortcodes
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function xmmusic($atts, $content=null, $code=""){
     return '<div class="sb-xiami" songid="'.$content.'"><div class="sb-player"><div class="sb-cover"></div><div class="sb-info clearfix"><div class="sb-title left"></div><div class="play-timer right">--:--</div></div><div class="play-button"> </div><div class="play-prosess"><div class="play-prosess-bar"></div></div></div><div class="sb-jplayer"></div></div>';

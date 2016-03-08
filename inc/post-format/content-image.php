@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying posts in the Image post format
+ *
+ * Used for index.
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
+?>
 <article <?php post_class(); ?>>
     <header class="entry-header">
 		<h2 class="entry-name">
@@ -7,7 +17,7 @@
 			<li><i class="fa fa-clock-o"></i> <?php the_time('d,m,Y');?></li>
 			<li><?php echo'<i class="fa fa-pencil-square-o"></i> ';the_category(','); ?></li>
 			<li><i class="fa fa-comments-o"></i> <?php comments_popup_link('No Reply', '1 Reply', '% Replies'); ?></li>
-			<li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li>
+			<li><i class="fa fa-eye"></i> <?php lo_post_views(' Views');?></li>
 		</ul>
     </header>
 	<div class="entry-image">
@@ -28,10 +38,10 @@
     </div>
     <footer class="entry-footer clearfix">
 		<div class="post-love">
-			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['mzw_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i> 
+			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['lo_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i>
 			<span class="love-count">
-				<?php if( get_post_meta($post->ID,'mzw_ding',true) ){            
-                    echo get_post_meta($post->ID,'mzw_ding',true);
+				<?php if( get_post_meta($post->ID,'lo_ding',true) ){
+                    echo get_post_meta($post->ID,'lo_ding',true);
                  } else {
                     echo '0';
                  }?>

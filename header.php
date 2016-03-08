@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the "site-content" div.
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
+?>
 <!DOCTYPE html>
 <html <?php if( dopt('d_autospace_b') != '' ) echo 'class="han-la"';?>>
 <head>

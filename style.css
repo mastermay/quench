@@ -4,7 +4,7 @@ Theme URI:https://lophita.com/wordpress-theme-quench.html
 Author:javis
 Author URI:https://lophita.com
 Description:nice theme
-Version: 3.0
+Version: 3.1
 */
 
 html {
@@ -1388,7 +1388,7 @@ thead tr {
 .widgetRoller {
     width: 18rem;
 }
-.mzw_search {
+.lo_search {
     padding: 20px 24px;
 }
 #searchform {
@@ -1403,14 +1403,14 @@ thead tr {
 #searchform input[type="text"] {
     width: 70%;
 }
-.mzw_admin {
+.lo_admin {
     padding: 0 !important;
 }
-.mzw_admin .author-body {
+.lo_admin .author-body {
     position: relative;
     text-align: center;
 }
-.mzw_admin img {
+.lo_admin img {
     width: 100%;
 }
 .author_img {

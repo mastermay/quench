@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template for related posts
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
+?>
 <div class="relatedpost box clearfix">
 <h3 class="relatedtitle"><span><?php _e('Related Posts', 'quench');?></span></h3>
 	<ul>
@@ -40,7 +48,7 @@ if ( $i < $post_num ) {
 			<i class="fa fa-file-text-o"></i>
 			<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
 		</li>
- 
+
 	<?php $i++;
 	} wp_reset_query();
 }

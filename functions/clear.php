@@ -1,4 +1,10 @@
 <?php
+/**
+ * Remove some actions and filters
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
 function fixed_activity_widget_avatar_style(){
 echo '<style type="text/css">

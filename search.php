@@ -1,6 +1,15 @@
-<?php get_header();?>
+<?php
+/**
+ * The template for displaying search results pages.
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ */
 
-<?php 
+get_header();
+?>
+
+<?php
 	if( have_posts() ){
 ?>
 
@@ -8,9 +17,9 @@
 	<h3 class="title-meta"><?php _e('Search Results', 'quench')?></h3>
 	<?php echo '<div class="desc-meta"><span class="top">◆</span>'; printf(__('Searching for %s', 'quench' ), $s); echo '</div>'; ?>
 </div>
-<?php	
-		while ( have_posts() ){
-			the_post(); 
+<?php
+	while ( have_posts() ) {
+			the_post();
 			get_template_part( 'inc/post-format/content', get_post_format() );
 		}
 	} else {
@@ -21,7 +30,6 @@
 </div>
 <?php
 	}
-
 ?>
 
 <?php if($wp_query->max_num_pages > 1 ) { ?>
@@ -29,9 +37,9 @@
        <?php pagenavi($range = 3);?>
     </div>
 <?php } ?>
-</div>
-</div>
 
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+</div></div>
+<?php
+get_sidebar();
+get_footer();
+?>
