@@ -71,5 +71,6 @@ update 2014-07-30
 
 + 音乐文章使用的是虾米的链接，可直接使用短代码[xiami]id[/xiami]插入。
 + 头像可能会出现不能访问的情况，目前使用方法是调用 `https` 头像。 需要修改可用关键词 Gravatar WordPress 搜索解决。
++ 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一直，这是引用的背景图片不同，可参考 \quench\images 目录下的图片。
 
 可查看[主题页面](https://lophita.com/wordpress-theme-quench.html)
