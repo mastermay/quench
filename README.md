@@ -1,5 +1,9 @@
 WordPress Theme Quench
 ======
+
+update 2016-05-03
++ 优化 评论框记住用户信息
+
 update 2016-02-20
 + 修复关闭评论仍显示评论框的错误
 

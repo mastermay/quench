@@ -8,7 +8,7 @@
  * @author Javis <javismay@gmail.com>
  * @license MIT
  */
- 
+
 if(comments_open()) {
  ?>
 <div class="comments clearfix box">
@@ -27,13 +27,13 @@ if(comments_open()) {
 			<?php if ( $user_ID ) { ?>
 			<p style="margin-bottom:10px">Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>&nbsp;|&nbsp;<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
 			<?php } else { ?>
-			<p class="input-row"><input type="text" name="author" class="text_input" id="author" size="22" tabindex="1" placeholder="<?php _e('NAME', 'quench');?> *"/>
+			<p class="input-row"><input type="text" name="author" class="text_input" id="author" size="22" tabindex="1" value="<?php if (!empty($comment_author)) { echo esc_attr($comment_author); } else { ''; } ?>" placeholder="<?php _e('NAME', 'quench');?> *"/>
 			</p>
 
-			<p class="input-row"><input type="text" name="email" class="text_input" id="email" size="22" tabindex="2" placeholder="<?php _e('E-MAIL', 'quench');?> *"/>
+			<p class="input-row"><input type="text" name="email" class="text_input" id="email" size="22" tabindex="2" value="<?php if (!empty($comment_author_email)) { echo esc_attr($comment_author_email); } else { ''; } ?>"  placeholder="<?php _e('E-MAIL', 'quench');?> *"/>
 			</p>
 
-			<p class="input-row"><input type="text" name="url" class="text_input" id="url" size="22" tabindex="3"  placeholder="<?php _e('WEBSITE', 'quench');?>"/>
+			<p class="input-row"><input type="text" name="url" class="text_input" id="url" size="22" tabindex="3" value="<?php if (!empty($comment_author_url)) { echo esc_attr($comment_author_url); } else { ''; } ?>" placeholder="<?php _e('WEBSITE', 'quench');?>"/>
 			</p>
 
 			<?php }?>
