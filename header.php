@@ -55,9 +55,8 @@
 	echo '</div>';
 	}
 ?>
-
+	<div id="bg-over"></div>
 	<div id="wrap">
-		<div id="bg-over"></div>
         <div id="preheader"><?php echo dopt('d_notice');?></div>
         <header id="header" class="clearfix">
 			<div class="head">

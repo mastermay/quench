@@ -1,5 +1,8 @@
 WordPress Theme Quench
 ======
+update 2016-05-11
++ 支持多说 AJAX
++ 优化背景遮罩，解决闪动 bug
 
 update 2016-05-03
 + 优化 评论框记住用户信息
