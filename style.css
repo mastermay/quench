@@ -1989,6 +1989,9 @@ body.nav-open #wrap {
     #sidebar {
         display: none
     }
+    #bg-over {
+        display: none;
+    }
 }
 @media screen and (max-width:650px) {
     body {
@@ -2000,6 +2003,9 @@ body.nav-open #wrap {
     }
     #main-nav {
         display: none
+    }
+    #bg-over {
+        display: none;
     }
     .headline a {
         float: none;
