@@ -630,6 +630,17 @@ blockquote cite a {
     border-radius: 3px 3px 0 0;
     border-top: 1px solid #47C2DC;
 }
+hr {
+    border: none;
+}
+hr:after {
+    content: "...";
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 20px;
+    font-size: 20px;
+}
 .share-on>a {
     border-radius: 0 0 3px 3px;
 }
@@ -1683,7 +1694,7 @@ thead tr {
     color: #333;
 }
 #footer .right {
-    margin-top: 10px;
+    margin-top: 3px;
     color: #888;
     text-align: center;
     font-size: 12px;

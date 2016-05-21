@@ -8,7 +8,7 @@
 ?>
         </div>
         <footer id="footer" class="yahei clearfix">
-			<p class="right">Theme by <a href="https://lostg.com" target="_blank">Javis</a></p>
+			<p class="right">Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> · Theme by <a href="https://lostg.com" target="_blank">Javis</a></p>
 			<p class="left"><?php echo dopt('d_notice_bottom');?></p>
 		</footer>
 	</div>
