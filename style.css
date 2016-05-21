@@ -1705,7 +1705,6 @@ thead tr {
 }
 #qrimg {
     background-color: #fff;
-    border-radius: 15px;
     position: fixed;
     bottom: 120px;
     right: 90px;
@@ -1713,6 +1712,11 @@ thead tr {
     height: 140px;
     display: none;
     z-index: 999;
+}
+#qrimg img {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
 }
 #gotop {
     bottom: -100px;
