@@ -477,6 +477,7 @@ blockquote cite a {
     padding: 1rem 1.5rem;
 }
 .entry-header h2 {
+    margin-bottom: 6px;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 300;
@@ -1302,6 +1303,9 @@ thead tr {
     position: relative;
     margin-top: 1rem;
 }
+.comment-meta .comment-author {
+    float: left;
+}
 .comment-meta .reply {
     font-size: 0.8rem;
     position: absolute;
@@ -1333,6 +1337,7 @@ thead tr {
 }
 .comment-metadata time {
     color: #ccc;
+    font-size: 12px;
 }
 .comment-content, .comment-awaiting-moderation {
     padding-left: 50px;
@@ -1362,7 +1367,7 @@ thead tr {
 #replytitle {
     font-size: 1.2rem;
     border-left: 2px solid #47C2DC;
-    margin: 15px 0;
+    margin: 25px 0;
     padding-left: 5px;
 }
 #replytitle #cancel-comment-reply-link {
