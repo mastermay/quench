@@ -1317,9 +1317,7 @@ thead tr {
     background: #ddd;
 }
 .comment-author {
-    float: left;
     margin-right: 10px;
-    width: 40px;
 }
 .comment-metadata {
     float: left;
@@ -1616,7 +1614,6 @@ thead tr {
     color: #888;
     font-weight: 600;
     text-transform: capitalize;
-    margin-bottom: 1px;
 }
 .widget .recentcomments .comment-c {
     display: inline;
