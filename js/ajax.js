@@ -180,7 +180,7 @@ function ajaxreload_code() {
     initgallary();
     initSlim();
     init();
-    lazyloadinit()
+    lazyloadinit();
     //jQuery("img").unveil();
     if (typeof DUOSHUO !== 'undefined')
         DUOSHUO.EmbedThread('.ds-thread');

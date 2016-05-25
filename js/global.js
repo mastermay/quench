@@ -422,7 +422,7 @@ $(document).ready(function($) {
         repeat: false
     });
     initgallary();
-    lazyloadinit()
+    lazyloadinit();
     $('#qr').hover(function() {
         $('#qrimg').show(300);
     }, function() {
