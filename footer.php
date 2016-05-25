@@ -14,7 +14,7 @@
 	</div>
 
 	<div id="qrimg">
-        <img src="http://s.jiathis.com/qrcode.php?url=<?php global $wp;echo home_url(add_query_arg(array(),$wp->request));?>">
+        <img src="https://api.lwl12.com/img/qrcode/get?ct=<?php global $wp;echo home_url(add_query_arg(array(),$wp->request));?>&w=130&h=130">
     </div>
 	<a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
 	<a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
@@ -43,3 +43,4 @@ wp_footer();
 ?>
 </body>
 </html>
+

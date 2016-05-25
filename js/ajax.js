@@ -179,8 +179,9 @@ function ajaxreload_code() {
     loadjplayer();
     initgallary();
     initSlim();
-    jQuery("img").unveil();
-
+    init();
+    lazyloadinit()
+    //jQuery("img").unveil();
     if (typeof DUOSHUO !== 'undefined')
         DUOSHUO.EmbedThread('.ds-thread');
 }

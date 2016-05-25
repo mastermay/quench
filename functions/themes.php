@@ -11,15 +11,18 @@ function my_enqueue_scripts_frontpage() {
 	wp_enqueue_style( 'fa', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.1.0' );
 	//载入jquery库
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.2.min.js');
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js');
 	wp_enqueue_script( 'jquery' );
-
-	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/global.min.js', array(), '3.1', true);
+	//wp_enqueue_script( 'base', get_template_directory_uri() . '/js/global.min.js', array(), '3.1', true);
+	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/global.js', array(), '3.1', true);
 	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), '1.0', true);
 	wp_enqueue_script( 'slimbox', get_template_directory_uri() . '/js/slimbox2.min.js', array(), '1.0', true);
 	wp_enqueue_script( 'jplayer', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array(), '1.0', true);
+	wp_enqueue_script( 'lazyload', get_template_directory_uri() . '/js/jquery.lazyload.min.js', array(), '1.0', true);
+
 	if( dopt('d_ajax_b') != '' )
-		wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.min.js', array(), '1.0', true);
+		//wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.min.js', array(), '1.0', true);
+		wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js', array(), '1.0', true);
 	if( dopt('d_autospace_b') != '' )
 		wp_enqueue_script( 'autospace', get_template_directory_uri() . '/js/autospace.min.js', array(), '1.0', true);
 
@@ -42,6 +45,15 @@ add_theme_support( 'post-thumbnails' );
 
 function dopt($e){
     return stripslashes(get_option($e));
+}
+
+add_filter ('the_content', 'lazyload');
+function lazyload($content) {
+    $loadimg_url=get_bloginfo('template_directory').'/loading.gif';
+    if(!is_feed()||!is_robots) {
+        $content=preg_replace('/<img(.+)src=[\'"]([^\'"]+)[\'"](.*)>/i',"<img\$1data-original=\"\$2\" src=\"$loadimg_url\"\$3>\n<noscript>\$0</noscript>",$content);
+    }
+    return $content;
 }
 
  ?>
