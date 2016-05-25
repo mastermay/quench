@@ -5,12 +5,13 @@ WordPress Theme Quench
 ----
 **目前改修改版主题属于测试阶段，部分功能暂未完善，调用的global.js及ajax.js均为未压缩版本，压缩版本暂未更新。目前暂时没有添加对选项开关的判断，因此建议在主题设置页面全开配置项。**
 
- 1. 本主题自带fancybox图片灯箱 和 lazyload图片延迟载功能，使用前请先关闭同类插件，避免冲突。
- 2. 适合本主题的多说CSS在本说明页面的最下方。 3、由于Fly是蒟蒻所以并不一定弄得很好。
- 3. 本主题作者为[Javis](https://github.com/mastermay)，Fly只是修改了一下而已。
- 4. 音乐文章使用的是虾米的链接，可直接使用短代码`[xiami]id[/xiami]`插入。
- 5. 由于众所周知的原因，头像可能会出现不能访问的情况，目前使用方法是通过 `https` 调用头像。 需要修改可用关键词 Gravatar WordPress 搜索解决。
- 6. 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一致，只是引用的背景图片不同，可参考 \quench\images 目录下的图片。
+ 1. 本主题自带 fancybox 图片灯箱 和 lazyload 图片延迟载功能，使用前请先关闭同类插件，避免冲突。
+ 2. 适合本主题的多说CSS在本说明页面的最下方。
+ 3. 由于Fly是蒟蒻所以并不一定弄得很好。
+ 4. 本主题作者为 [Javis](https://github.com/mastermay)，Fly 只是修改了一下而已。
+ 5. 音乐文章使用的是虾米的链接，可直接使用短代码`[xiami]id[/xiami]`插入。
+ 6. 由于众所周知的原因，头像可能会出现不能访问的情况，目前使用方法是通过 `https` 调用头像。 需要修改可用关键词 Gravatar WordPress 搜索解决。
+ 7. 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一致，只是引用的背景图片不同，可参考 \quench\images 目录下的图片。
 
 可查看[主题页面](https://lophita.com/wordpress-theme-quench.html)
 
@@ -18,9 +19,9 @@ WordPress Theme Quench
 ----
 update 2016-05-25
 
- - 将图片延迟加载插件unveil更换为lazyload
- - 修复自动添加空格功能在ajax加载页面后没有自动触发的错误
- - 更换二维码API，使用支持https的[Liwanglin12的API](https://blog.lwl12.com/read/lwl-api-qrcode.html)
+ - 将图片延迟加载插件 unveil 更换为 lazyload
+ - 修复自动添加空格功能在 AJAX 加载页面后没有自动触发的错误
+ - 更换二维码 API ，使用支持 https 的[Liwanglin12的API](https://blog.lwl12.com/read/lwl-api-qrcode.html)
  - 修改了说明页面
  - 修改了网站标题下简介的显示动画
 
@@ -133,5 +134,5 @@ update 2014-07-30
 }
 ```
 
-完成后效果如图（已隐藏Like按钮，多说部分文字已自定义）
+完成后效果如图（已隐藏 Like 按钮，多说部分文字已自定义）
 ![enter image description here](https://github.com/fly3949/imgs/blob/master/demo/quench/duoshuo.png?raw=true)
