@@ -6,13 +6,13 @@ WordPress Theme Quench
 
  1. 本主题自带 fancybox 图片灯箱 和 lazyload 图片延迟载功能，使用前请先关闭同类插件，避免冲突。
  2. 适合本主题的多说CSS在本说明页面的最下方。
- 3. 由于Fly是蒟蒻所以并不一定弄得很好。
- 4. 本主题作者为 [Javis](https://github.com/mastermay)，Fly 只是修改了一下而已。
- 5. 音乐文章使用的是虾米的链接，可直接使用短代码`[xiami]id[/xiami]`插入。
+ 3. 音乐文章使用的是虾米的链接，可直接使用短代码`[xiami]id[/xiami]`插入。
+ 4. 头像缓存功能需手动在根目录建立avatar文件夹并设置属性为可写。
+ 5. 将http://pan.baidu.com/s/1jGkPhhs的jplayer.swf放在网站根目录。
  6. 由于众所周知的原因，头像可能会出现不能访问的情况，目前使用方法是通过 `https` 调用头像。 需要修改可用关键词 Gravatar WordPress 搜索解决。
  7. 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一致，只是引用的背景图片不同，可参考 \quench\images 目录下的图片。
 
-可查看[主题页面](https://lophita.com/wordpress-theme-quench.html)
+更多内容可查看[主题页面](https://lophita.com/wordpress-theme-quench.html)
 
 更新日志
 ----
@@ -22,7 +22,7 @@ update 2016-05-26
  - 升级 jQuery 版本到最新的 1.12.4
  - 将图片延迟加载插件 unveil 更换为 lazyload
  - 修复自动添加空格功能在 AJAX 加载页面后没有自动触发的错误
- - 更换二维码 API ，使用支持 https 的[Liwanglin12的API](https://blog.lwl12.com/read/lwl-api-qrcode.html)
+ - 更换二维码 API ，使用支持 https 的 [Liwanglin12的API](https://blog.lwl12.com/read/lwl-api-qrcode.html)
  - 修改了说明页面
  - 修改了网站标题下简介的显示动画
 
@@ -128,7 +128,7 @@ update 2014-07-30
 }
 ```
 
-如果需要隐藏不和谐的Like按钮，可以再添加以下代码：
+如果需要隐藏不和谐的 Like 按钮，可以再添加以下代码：
 ```
 .ds-meta {
   display:none;
