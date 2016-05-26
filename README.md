@@ -3,7 +3,6 @@ WordPress Theme Quench
 
 注意事项
 ----
-**目前改修改版主题属于测试阶段，部分功能暂未完善，调用的global.js及ajax.js均为未压缩版本，压缩版本暂未更新。目前暂时没有添加对选项开关的判断，因此建议在主题设置页面全开配置项。**
 
  1. 本主题自带 fancybox 图片灯箱 和 lazyload 图片延迟载功能，使用前请先关闭同类插件，避免冲突。
  2. 适合本主题的多说CSS在本说明页面的最下方。
@@ -17,8 +16,10 @@ WordPress Theme Quench
 
 更新日志
 ----
-update 2016-05-25
+update 2016-05-26
 
+ - 增加了全局 AJAX 模式下对 Hermit 播放器的支持
+ - 升级 jQuery 版本到最新的 1.12.4
  - 将图片延迟加载插件 unveil 更换为 lazyload
  - 修复自动添加空格功能在 AJAX 加载页面后没有自动触发的错误
  - 更换二维码 API ，使用支持 https 的[Liwanglin12的API](https://blog.lwl12.com/read/lwl-api-qrcode.html)
