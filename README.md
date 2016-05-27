@@ -137,3 +137,6 @@ update 2014-07-30
 
 完成后效果如图（已隐藏 Like 按钮，部分文字已自定义）
 ![enter image description here](https://github.com/fly3949/imgs/blob/master/demo/quench/duoshuo.png?raw=true)
+
+
+Thanks to [@fly3949](https://github.com/fly3949), [@h2y](https://github.com/h2y).
