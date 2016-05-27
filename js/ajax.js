@@ -159,6 +159,14 @@ function ajaxloadPage(url, push, getData) {
         });
     }
 }
+function isExitsFunction(funcName) {
+    try {
+        if (typeof(eval(funcName)) == "function") {
+            return true;
+        }
+    } catch(e) {}
+    return false;
+}
 
 function submitSearch(param) {
     if (!ajaxisLoad) {
@@ -179,10 +187,13 @@ function ajaxreload_code() {
     loadjplayer();
     initgallary();
     initSlim();
-    jQuery("img").unveil();
-
+    lazyloadinit();
+    if (isExitsFunction(init) )
+    	init();
     if (typeof DUOSHUO !== 'undefined')
         DUOSHUO.EmbedThread('.ds-thread');
+    if (window.hermitjs !== undefined )
+		hermitjs.reload(0); //默认方式, 会打断播放状态
 }
 
 function ajaxclick_code(thiss) {
