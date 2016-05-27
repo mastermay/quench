@@ -139,4 +139,4 @@ update 2014-07-30
 ![enter image description here](https://github.com/fly3949/imgs/blob/master/demo/quench/duoshuo.png?raw=true)
 
 
-Thanks to @fly3949 , @h2y
+Thanks to [@fly3949](https://github.com/fly3949), [@h2y](https://github.com/h2y).
