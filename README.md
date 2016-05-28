@@ -4,13 +4,10 @@ WordPress Theme Quench
 注意事项
 ----
 
- 1. 本主题自带 fancybox 图片灯箱 和 lazyload 图片延迟载功能，使用前请先关闭同类插件，避免冲突。
+ 1. 本主题自带 slimbox 图片灯箱 和 lazyload 图片延迟载功能，使用前请先关闭同类插件，避免冲突。
  2. 适合本主题的多说 CSS 在本说明页面的最下方。
  3. 音乐文章使用的是虾米的链接，可直接使用短代码`[xiami]id[/xiami]`插入。
- 4. 头像缓存功能需手动在根目录建立 avatar 文件夹并设置属性为可写。
- 5. 将 http://pan.baidu.com/s/1jGkPhhs 的 jplayer.swf 放在网站根目录。
- 6. 由于众所周知的原因，头像可能会出现不能访问的情况，目前使用方法是通过 `https` 调用头像。 需要修改可用关键词 Gravatar WordPress 搜索解决。
- 7. 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一致，只是引用的背景图片不同，可参考 \quench\images 目录下的图片。
+ 4. 文章中支持的短代码有：attention，bag，bonus，calendar，check，delete，edit，flag，help，information，love，tag，样式基本一致，只是引用的背景图片不同，可参考 \quench\images 目录下的图片。
 
 更多内容可查看[主题页面](https://lophita.com/wordpress-theme-quench.html)
 
@@ -105,6 +102,7 @@ update 2014-07-30
 14. 内置文章存档、标签云和网站地图3种页面模板
 15. 文章二维码
 16. 文章喜欢功能
+17. Gravatar 头像加速（七牛代理）
 
 多说样式优化
 ------
