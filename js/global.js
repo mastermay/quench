@@ -299,6 +299,7 @@ $(document).ready(function($) {
             b.focus()
         }
     }
+
 });
 
 $(document).on("click", ".commentnav a",
@@ -381,11 +382,14 @@ function initgallary() {
     });
 }
 function lazyloadinit() {
+    try{
     $("img").lazyload({
         threshold : 200,
         effect:"fadeIn"
       });
+    } catch (e) {}
 }
+
 
 $(document).ready(function($) {
 	var rollbox = $('#sidebar .widget'),

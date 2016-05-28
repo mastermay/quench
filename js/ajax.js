@@ -159,14 +159,6 @@ function ajaxloadPage(url, push, getData) {
         });
     }
 }
-function isExitsFunction(funcName) {
-    try {
-        if (typeof(eval(funcName)) == "function") {
-            return true;
-        }
-    } catch(e) {}
-    return false;
-}
 
 function submitSearch(param) {
     if (!ajaxisLoad) {
@@ -188,11 +180,12 @@ function ajaxreload_code() {
     initgallary();
     initSlim();
     lazyloadinit();
-    if (isExitsFunction(init) )
+    try{
     	init();
+    } catch (e) {}
     if (typeof DUOSHUO !== 'undefined')
         DUOSHUO.EmbedThread('.ds-thread');
-    if (window.hermitjs !== undefined )
+    if( window.hermitjs !== undefined )
 		hermitjs.reload(0); //默认方式, 会打断播放状态
 }
 
