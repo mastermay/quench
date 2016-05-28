@@ -46,8 +46,8 @@ function postformat_gallery(){
 		return false;
 	}
 }
-
-add_filter ('the_content', 'lazyload');
+if( dopt('d_lazyload_b') != '' )
+	add_filter ('the_content', 'lazyload');
 function lazyload($content) {
     $loadimg_url=get_bloginfo('template_directory').'/loading.gif';
     if(!is_feed()||!is_robots) {
