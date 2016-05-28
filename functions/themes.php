@@ -28,7 +28,8 @@ function my_enqueue_scripts_frontpage() {
 
 	wp_localize_script('base', 'ajax', array(
 		'ajax_url' => admin_url('admin-ajax.php'),
-		'home' => home_url()
+		'home' => home_url(),
+		'swf' => get_template_directory_uri() .'/js/'
 	));
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_scripts_frontpage' );
