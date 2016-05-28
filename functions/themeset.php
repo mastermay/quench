@@ -31,6 +31,9 @@ $options = array (
 	array( "name" => "开启全站 Ajax","type" => "tit"),
 	array( "id" => "d_ajax_b","type" => "checkbox" ),
 
+	array( "name" => "开启图片延迟加载","type" => "tit"),
+	array( "id" => "d_lazyload_b","type" => "checkbox" ),
+
 	array( "name" => "使用同一个侧边栏","type" => "tit"),
 	array( "id" => "d_same_sidebar_b","type" => "checkbox" ),
 

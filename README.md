@@ -16,6 +16,9 @@ WordPress Theme Quench
 
 更新日志
 ----
+update 2016-05-28
+ - 添加了是否开启 lazyload 图片延迟加载的选项
+
 update 2016-05-26
 
  - 增加了全局 AJAX 模式下对 Hermit 播放器的支持
