@@ -500,7 +500,15 @@ class lo_bookmarks extends WP_Widget {
 		<p>
 			<label>
 				分类：
-				<input class="widefat" id="<?php echo $this->get_field_id('cate'); ?>" name="<?php echo $this->get_field_name('cate'); ?>" type="text" value="<?php echo $instance['cate']; ?>" />
+				<select class="widefat" id="<?php echo $this->get_field_id('cate'); ?>" name="<?php echo $this->get_field_name('cate'); ?>" style="width:100%;">
+					<?php
+					$cates = bookmarks_cate();
+					foreach($cates as $key=>$value){
+						echo '<option value="'.$key.'" '.selected($key, $instance['cate']).'>'.$value.'</option>';
+					}
+					?>
+				</select>
+
 			</label>
 		</p>
 		<p>
