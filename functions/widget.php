@@ -504,7 +504,9 @@ class lo_bookmarks extends WP_Widget {
 					<?php
 					$cates = bookmarks_cate();
 					foreach($cates as $key=>$value){
-						echo '<option value="'.$key.'" '.selected($key, $instance['cate']).'>'.$value.'</option>';
+						echo '<option value="'.$key.'" ';
+						selected($key, $instance['cate']);
+						echo '>'.$value.'</option>';
 					}
 					?>
 				</select>
