@@ -373,6 +373,18 @@ $(document).on("touchstart", ".has-opened #wrap",
         $('#mobile-nav').delay(500).hide(100);
     });
 
+$(document).on("click", ".has-opened #wrap",
+    function() {
+        $('body').removeClass('has-opened');
+        $('#mobile-nav').delay(500).hide(100);
+    });
+
+$(document).on("click", "#mobile-nav a",
+    function() {
+        $('body').removeClass('has-opened');
+        $('#mobile-nav').delay(500).hide(100);
+    });
+
 function initgallary() {
     $('.flexslider').flexslider({
         animation: "slide",
