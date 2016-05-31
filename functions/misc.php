@@ -196,5 +196,15 @@ function is_mobile() {
 	return $is_mobile;
 }
 
-
+function bookmarks_cate() {
+	global $wpdb;
+	$all_link_cats = array();
+	$linkcats = $wpdb->get_results("SELECT T1.name AS name, T1.term_id AS ID FROM $wpdb->terms T1, $wpdb->term_taxonomy T2 WHERE T1.term_id = T2.term_id AND T2.taxonomy = 'link_category'");
+	if($linkcats) {
+		foreach($linkcats as $linkcat) {
+			$all_link_cats[$linkcat->ID] = $linkcat->name;
+		}
+	}
+	return $all_link_cats;
+}
  ?>
