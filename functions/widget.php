@@ -530,7 +530,7 @@ function lo_bookmarks($id,$limits){
 	    $output = '';
 	    if ( !empty($bookmarks) ) {
 	        foreach ($bookmarks as $bookmark) {
-	            $output .=  '<li><img height="16px" width="16px" src="//api.byi.pw/favicon/?url=' . $bookmark->link_url . '"><a href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" >'.  $bookmark->link_name .'</a></li>';
+	            $output .=  '<li><img src="//api.byi.pw/favicon/?url=' . $bookmark->link_url . '"><a href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" >'.  $bookmark->link_name .'</a></li>';
 	        }
 	    }
 	    return $output;
