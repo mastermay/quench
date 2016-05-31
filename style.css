@@ -1684,10 +1684,9 @@ thead tr {
     transition: .3s ease-in-out;
 }
 .lo_bookmarks li {
-    margin-left: 20px;
+    margin-left: 5px;
     margin-bottom: 6px;
     font-size: 16px;
-    list-style-type: lower-greek;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
@@ -1695,11 +1694,18 @@ thead tr {
     color: inherit;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    vertical-align: middle;
+}
+.lo_bookmarks li img {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 .lo_bookmarks li:hover {
     color: #47C2DC;
-    -webkit-transform: translateX(20px);
-    transform: translateX(20px);
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
 }
 #footer {
     padding: 1rem;
