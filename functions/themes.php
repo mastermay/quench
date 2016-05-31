@@ -7,7 +7,7 @@
  */
 
 function my_enqueue_scripts_frontpage() {
-	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.1' );
+	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.1.3' );
 	wp_enqueue_style( 'fa', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.1.0' );
 	//载入jquery库
 	wp_deregister_script( 'jquery' );
