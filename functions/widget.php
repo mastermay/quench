@@ -471,7 +471,7 @@ add_action( 'widgets_init', create_function('', 'return register_widget("lo_book
 
 class lo_bookmarks extends WP_Widget {
 	function lo_bookmarks() {
-		$widget_ops = array( 'classname' => 'lo_recent_comment', 'description' => '友情链接' );
+		$widget_ops = array( 'classname' => 'lo_bookmarks', 'description' => '友情链接' );
 		$this->__construct( 'lo_bookmarks', '友情链接', $widget_ops );
 	}
 
