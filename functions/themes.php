@@ -7,7 +7,7 @@
  */
 
 function my_enqueue_scripts_frontpage() {
-	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.1' );
+	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.1.3' );
 	wp_enqueue_style( 'fa', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.1.0' );
 	//载入jquery库
 	wp_deregister_script( 'jquery' );
@@ -43,6 +43,8 @@ register_nav_menus(array('header-menu' => '顶部导航'));
 
 add_theme_support( 'post-formats', array( 'status', 'image', 'gallery', 'audio' ));
 add_theme_support( 'post-thumbnails' );
+
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
 function dopt($e){
     return stripslashes(get_option($e));
