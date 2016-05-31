@@ -1707,6 +1707,9 @@ thead tr {
     -webkit-transform: translateX(5px);
     transform: translateX(5px);
 }
+.lo_bookmarks hanla {
+    display: none;
+}
 #footer {
     padding: 1rem;
     background-color: #fff;
