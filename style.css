@@ -2077,6 +2077,7 @@ body.nav-open #wrap {
     #header h1 a {
         color: #fff;
         font-size: 1.5rem;
+        word-break: break-word;
     }
     #header .head {
         margin: 0 auto;
