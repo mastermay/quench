@@ -14,10 +14,16 @@ WordPress Theme Quench
 更新日志
 ----
 update 2016-05-31
+
+ - 修复标题不能正确换行
+
+update 2016-05-31
+
  - 添加了侧栏友链模块，并支持网站图标自动获取 （使用了[冰翼博客](https://icewing.cc/)提供的 [BYI_API](https://api.byi.pw/favicon) ）
  - 修复了移动样式下的自适应问题
 
 update 2016-05-28
+
  - 添加了是否开启 lazyload 图片延迟加载的选项
 
 update 2016-05-26

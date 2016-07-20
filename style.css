@@ -470,7 +470,6 @@ blockquote cite a {
     border-color: #FFF #FFF #47C2DC;
     content: "";
     position: absolute;
-    margin-left: -1px;
     bottom: 12px;
 }
 .entry-header {
@@ -485,7 +484,6 @@ blockquote cite a {
 }
 .entry-header h2 a {
     position: relative;
-    white-space: nowrap;
     color: #666;
     border-bottom: none;
 }
