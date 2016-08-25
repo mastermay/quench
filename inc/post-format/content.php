@@ -14,10 +14,10 @@
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>
 		<ul class="entry-meta">
-			<li><i class="fa fa-clock-o"></i> <?php the_time('d,m,Y');?></li>
+            <li><i class="fa fa-clock-o"></i> <?php the_time('d,m,Y');?></li>
 			<li><?php echo'<i class="fa fa-pencil-square-o"></i> ';the_category(','); ?></li>
-			<li><i class="fa fa-comments-o"></i> <?php comments_popup_link('No Reply', '1 Reply', '% Replies'); ?></li>
-			<li><i class="fa fa-eye"></i> <?php lo_post_views(' Views');?></li>
+			<li><i class="fa fa-comments-o"></i> <?php comments_popup_link(__('No Reply', 'quench'), __('1 Reply', 'quench'), '% '.__('Replies', 'quench')); ?></li>
+			<li><i class="fa fa-eye"></i> <?php lo_post_views(' '.__('Views', 'quench'));?></li>
 		</ul>
     </header>
     <div class="entry-content" itemprop="description">

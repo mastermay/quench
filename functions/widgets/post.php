@@ -105,9 +105,9 @@ function lo_posts_list($orderby,$limit,$cat) {
 		echo '<h3><a href="'.get_permalink().'">';
 		the_title();
 		echo '</a></h3><div class="post-meta"><span>';
-		comments_popup_link('No Reply', '1 Reply', '% Replies');
+		comments_popup_link(__('No Reply', 'quench'), __('1 Reply', 'quench'), '% '.__('Replies', 'quench'));
 		echo '</span> | <span>';
-		lo_post_views(' Views');
+		lo_post_views(' '.__('Views', 'quench'));
 		echo '</span></div></div>';
 		echo '</li>';
     endwhile; wp_reset_query();

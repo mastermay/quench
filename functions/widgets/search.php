@@ -1,6 +1,6 @@
 <?php
 /**
- * widget: search 
+ * widget: search
  *
  * @author Javis <javismay@gmail.com>
  * @license MIT
@@ -20,8 +20,8 @@ class lo_search extends WP_Widget {
 		?>
 		<form id="searchform" class="searchform" action="<?php echo get_bloginfo ('url'); ?>" method="GET">
 			<div>
-				<input name="s" id="s" size="15" placeholder="Enter Keywords..." type="text">
-				<input value="Search" type="submit">
+				<input name="s" id="s" size="15" placeholder="<?php _e('Enter Keywords...', 'quench');?>" type="text">
+				<input value="<?php _e('Search', 'quench');?>" type="submit">
 			</div>
 		</form>
 <?php

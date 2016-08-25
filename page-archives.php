@@ -20,8 +20,8 @@ get_header();
 		</h2>
 		<ul class="entry-meta">
 			<li><i class="fa fa-clock-o"></i> <?php the_time('d,m,Y');?></li>
-			<li><i class="fa fa-comments-o"></i> <?php comments_popup_link('No Reply', '1 Reply', '% Replies'); ?></li>
-			<li><i class="fa fa-eye"></i> <?php lo_post_views(' Views');?></li>
+            <li><i class="fa fa-comments-o"></i> <?php comments_popup_link(__('No Reply', 'quench'), __('1 Reply', 'quench'), '% '.__('Replies', 'quench')); ?></li>
+			<li><i class="fa fa-eye"></i> <?php lo_post_views(' '.__('Views', 'quench'));?></li>
 		</ul>
     </header>
     <div class="entry-content" itemprop="description">
