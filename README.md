@@ -13,7 +13,11 @@ WordPress Theme Quench
 
 更新日志
 ----
-update 2016-05-31
+update 2016-08-26
+
+ - 多语言支持
+
+update 2016-07-20
 
  - 修复标题不能正确换行
 

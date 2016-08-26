@@ -7,13 +7,13 @@
  */
 
 function my_enqueue_scripts_frontpage() {
-	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.1.3' );
+	wp_enqueue_style( 'default', get_template_directory_uri() . '/style.min.css', array(), '3.2.1' );
 	wp_enqueue_style( 'fa', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.1.0' );
 	//载入jquery库
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js');
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/global.min.js', array(), '3.1.2', true);
+	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/global.min.js', array(), '3.2.1', true);
 	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), '1.0', true);
 	wp_enqueue_script( 'slimbox', get_template_directory_uri() . '/js/slimbox2.min.js', array(), '1.0', true);
 	wp_enqueue_script( 'jplayer', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array(), '1.0', true);
